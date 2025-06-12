@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dreamy Web Vibes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Josefin+Sans&family=Cinzel&family=Baloo+2&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Kalam', cursive;
+      background: url('pImage1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      overflow: hidden;
+    }
+    .falling {
+      position: fixed;
+      top: -50px;
+      animation: fall 8s linear infinite;
+      opacity: 0.4;
+      z-index: 0;
+    }
+    @keyframes fall { 0% {transform: translateY(0);} 100% {transform: translateY(110vh);} }
+    .container {
+      position: absolute;
+      top:50%; left:50%;
+      transform: translate(-50%, -50%);
+      text-align:center;
+      padding:20px;
+    }
+    h1 { font-size:18.5px; margin-bottom:15px; text-shadow:2px 2px 4px #000; }
+    p, pre { font-size:13.5px; margin:15px 0; text-shadow:1px 1px 3px #000; white-space: pre-wrap; }
+    button {
+      padding:10px 20px; border:none; border-radius:20px;
+      font-size:14px; cursor:pointer; margin-top:20px;
+      transition:0.3s;
+      background:white; color:#c2185b;
+    }
+    button:hover, button:active {
+      box-shadow:0 0 15px #ff69b4;
+      background:#c2185b; color:white;
+    }
+    .watermark {
+      position:fixed; bottom:5px; right:10px;
+      font-size:12px; opacity:0.6;
+    }
+    .hide { display:none; }
+  </style>
+</head>
+<body>
+
+  <!-- Falling Hearts -->
+  <img src="https://i.ibb.co/hd6h8Kg/heart.png" class="falling" style="left:10%; animation-delay:0s;">
+  <img src="https://i.ibb.co/hd6h8Kg/heart.png" class="falling" style="left:30%; animation-delay:2s;">
+  <img src="https://i.ibb.co/hd6h8Kg/heart.png" class="falling" style="left:50%; animation-delay:4s;">
+  <img src="https://i.ibb.co/hd6h8Kg/heart.png" class="falling" style="left:70%; animation-delay:6s;">
+  <img src="https://i.ibb.co/hd6h8Kg/heart.png" class="falling" style="left:90%; animation-delay:8s;">
+
+  <!-- Hidden Audio Player -->
+  <audio id="bgMusic" loop>
+    <source src="sitaramakalyana.wav" type="audio/mpeg">
+  </audio>
+      
+  <!-- Optional Mute/Unmute Button -->
+  <button onclick="toggleAudio()" style="position:fixed; bottom:10px; left:10px; z-index:999;">🎵</button>
+
+  <!-- Page 1 -->
+  <div id="page1" class="container">
+    <h1>DREAMY WEB VIBES</h1>
+    <p>Welcome to a world where words glow like stardust ✨, and every click unfolds a secret dream 💫. Here, emotions drift like soft clouds ☁️, and hearts whisper through shimmering lines of love 💖. Let your eyes wander 👀, your heart smile 😊, and your soul feel the magic that lingers in every pixel of this page 🌸.</p>
+    <p style="font-weight:bold; font-size:13px;">ಪ್ರತಿ ಕ್ಲಿಕ್‌ಗೂ ಒಂದು ರಹಸ್ಯ ಕನಸು 💫 ಬಿಚ್ಚಿಕೊಳ್ಳುವ ಜಗತ್ತಿಗೆ ಸುಸ್ವಾಗತ. ಇಲ್ಲಿ ಶಬ್ದಗಳು ನಕ್ಷತ್ರ ಧೂಳಿನಂತೆ ಹೊಳೆಯುತ್ತವೆ ✨, ಭಾವನೆಗಳು ಮೋಡದಂತೆ ☁️ ಹಾರುತ್ತವೆ. ಪ್ರೀತಿ ತುಂಬಿದ ಸಾಲುಗಳಲ್ಲಿ ಹೃದಯ 💖 ಮೆಲ್ಲಗೆ ಹೆಸರು ಹೆಬ್ಬಾಗುತ್ತದೆ. ನಿನ್ನ ಕಣ್ಣು 👀 ತಿರುಗಲಿ, ಹೃದಯ 😊 ನಗಲಿ, ಈ ಪುಟದ ಪ್ರತಿಯೊಂದು ಪಿಕ್ಸೆಲ್‌ನಲ್ಲಿ 🌸 ಇರುವ ಮಾಯಾಜಾಲವನ್ನು ✨ ಅನುಭವಿಸು.</p>
+    <button onclick="nextPage()">ENTER THE DREAM</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="page2" class="container hide">
+    <h1 style="font-family:'Josefin Sans', sans-serif; font-size:18px;">LOVE LINES FOR MY MUDDU</h1>
+    <pre id="englishQuote" style="font-family:'Baloo 2', cursive; font-size:13.5px;">
+In a moment made of you and me 💑,
+Time stands still ⏳, forever free 🕊️.
+Eyes meet 👀, and hearts confess ❤️,
+What words could never express ✨.
+
+A soul connection 🔗, wild and true 💖,
+Painted in a thousand hue 🎨.
+Like the sun ☀️ that loves the sea 🌊,
+You were always meant for me 💌.
+Even if the stars ✨ forget to shine 🌃,
+You'll forever be mine 💘.
+    </pre>
+    <pre id="kannadaQuote" class="hide" style="font-weight:bold; font-size:13px;">
+ನೀನು ಮತ್ತು ನಾನು 💑 ಎನ್ನುವ ಕ್ಷಣದಲ್ಲಿ,
+ಸಮಯವೇ ನಿಲ್ಲುತ್ತದೆ ⏳, ಮುಕ್ತವಾಗುತ್ತದೆ 🕊️.
+ಕಣ್ಣು 👀 ಕಣ್ಣು ನೋಡುತ್ತವೆ, ಹೃದಯ ❤️ ಹೇಳುತ್ತದೆ,
+ಮಾತುಗಳಿಂದ ✨ ಹೇಳಲಾಗದ ಪ್ರೀತಿ.
+
+ಆತ್ಮ ಬಂಧ 🔗, ಅಸಲಿ ಬೆರಗಿನ ಪ್ರೀತಿ 💖,
+ಬಣ್ಣಗಳ 🎨 ಸಾವಿರರಲಿ ಹೊತ್ತಿರುವುದು.
+ಸೂರ್ಯ ☀️ ಸಮುದ್ರವನ್ನು 🌊 ಪ್ರೀತಿಸುವಂತೆ,
+ನೀನು ನನ್ನಿಗಾಗಿಯೇ ಹುಟ್ಟಿದ್ದೆ 💌.
+ನಕ್ಷತ್ರಗಳು ✨ ಹೊಳೆಯದಿದ್ದರೂ 🌃,
+ನೀನು ಎಂದೆಂದಿಗೂ ನನ್ನದೇ 💘.
+    </pre>
+    <button id="kannadaBtn" onclick="toggleKannada()">FEEL IT IN KANNADA</button>
+    <button id="nextBtn" class="hide" onclick="toPage3()">UNFOLD THE NEXT SECRET</button>
+  </div>
+
+  <!-- Page 3 -->
+  <div id="page3" class="container hide">
+    <h1 style="font-family:'Cinzel', serif; font-size:16px;">A STORY CAPTURED IN MOMENT'S</h1>
+    <pre style="font-size:13px; font-weight:bold;">
+❤️ ನನ್ನ ಪ್ರೀತಿಯ ಬಂಗಾರ..❤️
+
+ಏನಮ್ಮಾ ಅಕ್ಕಾ! ಈ ಪತ್ರ ಬರಿಯೋಕೆ ನಾನೇನು Shakespeare ಅಲ್ಲ 😅…
+ಆದರೆ ನಿನ್ನ ಮುಂದೆ ನನ್ನ ಹೃದಯ ಹಗ್ಗದಂತಾಗೋದೆ ತಲೆಬಿದ್ದ ಕೆಲಸ! 😂
+
+ನೀನೇನು ಗೊತ್ತಾ? ನಿನ್ನೇ ನೋಡಿದಾಗಲೆಂದರೆ ನಾನು ಒಮ್ಮೆ ಎಲೆಕ್ಟ್ರಿಕ್ ಶಾಕ್ ಹೊಡೆಯಿದ ಹಾಲುಗಾಲು ಹುಡುಗನ처럼 ಆಗುತ್ತೀನಿ ⚡😳
+ನಿನ್ನ ನಗು ಅಂದ್ರೆ ನಮ್ಮ ಊರಿನ ಗಾಲಿ ದೋಸೆ ಹಾಲ್ನ್ನು ನೆನೆಸೋ ಹದ 🍽️ ಯಾರಿಗೂ ಕೊಡೋದೇ ಬೇಡ, exclusive ನನ್ಗಷ್ಟೇ! 😎❤️
+
+ನಾನು ಏನೇನು ಕೆಟ್ಟ ಕೆಲಸ ಮಾಡಿದ್ರೂ, ಸಿಕ್ಕಾಪಟ್ಟೆ ಹೊಡೆಯೋದು ನೀನೆ.
+ಆದರೆ ಹೊಡೆದ್ಮೇಲೆ — "ಏನು ಕಣೋ ನನ್ನ ಚಿಕ್ಕ ಕಂದಾ!" ಅಂತ ಮುದ್ದು ಹಾಕ್ತಿಯಾ 😄
+ಅದೇಕೋ ಅದೆಲ್ಲವೂ ಒಮ್ಮೆ ಉಬ್ಬಿಸಿ ಬಡಿದ ಮೊಸರಣ್ಣ feeling! 😋
+
+ಅಕ್ಕಾ, ನಿನ್ನ ಪ್ರೀತಿ ಎಂತಂದ್ರೆ… ಬಿಸಿಬೇಳೆ ಬಾತ್ನಲ್ಲಿ ಎಣ್ಣೆ 🍲. ಅಷ್ಟೊಂದು ಇಂಪೋರ್ಟೆಂಟ್!
+ನಿನ್ನದಿಲ್ಲದ ದಿನ ಅಂದರೆ ಮಜಾ ಇಲ್ಲ. ನಿನ್ನ absence ಅಂದರೆ — ಮೊಟ್ಟೆ ತಿಂದ ಮೇಲೆ ಉಪ್ಪು ಮರೀತದಂತೆ! 🥚😵‍💫
+
+ಹೇಳ್ಬೇಕಾ? 😏 ನಾನೇನಾದರೂ ಲವ್ವು ಮಾಡೋದಾದ್ರೆ, ಮೊದಲು ನಾನು ಅಕ್ಕಾ approval ತೆಗೊಬೇಕಾಗುತ್ತೆ 🤝
+ಏಕೆಂದ್ರೆ… ನೀನೆನು endorse ಮಾಡದೇ ಇದ್ದ್ರೆ, ನನ್ನ love story Jio signal ಹೋದೇಂತೆ ಆಗ್ತದೆ. 📴😂
+
+ಅಕ್ಕಾ… ನಿನಗಂತು ಒಂದು ಸತ್ಯ ಹೇಳ್ಬೇಕು… ನಾನು ಎಷ್ಟು ದೊಡ್ಡವನಾದ್ರೂ, ಎಷ್ಟು ಡಬ್ಬಾಳವನಾದ್ರೂ,
+ಯಾವತ್ತೂ ನಿನ್ನ ಹತ್ತಿರ ಬಂದು — "ಅಕ್ಕಾ ಅಕ್ಕಾ… ಒಬ್ಬ hug ಕೊಡ್ಲಾ!" 🤗 ಅಂತಾನೇ ಕಳಚ್ತೀನಿ 😄❤️
+
+ಬರಿ comedy ಅಲ್ಲ akka, ನಿಜವನ್ನೂ ಹೇಳ್ತೀನಿ — ನಿನ್ನ ಪ್ರೀತಿ ನನ್ನ ಎದೆಯ beating heart ❤️
+ನನ್ನ ಸಾಧನೆಗಳ secret weapon ನೀನೆ 💪✨
+ನೀನು ಇಲ್ಲದಿದ್ರೆ ನಾನೊಬ್ಬ ಸಿಹಿ ಇಲ್ಲದ ಮೈಸೂರು ಪಾಕ್! 🍬😅
+    </pre>
+    <button onclick="toWhatsapp()">SEND WHATSAPP MESSAGE</button>
+  </div>
+
+  <div class="watermark">@navabirwaz20</div>
+
+  <script>
+    function nextPage() {
+      document.getElementById('page1').classList.add('hide');
+      document.getElementById('page2').classList.remove('hide');
+    }
+    function toggleKannada() {
+      document.getElementById('englishQuote').classList.add('hide');
+      document.getElementById('kannadaQuote').classList.remove('hide');
+      document.getElementById('kannadaBtn').classList.add('hide');
+      document.getElementById('nextBtn').classList.remove('hide');
+    }
+    function toPage3() {
+      document.getElementById('page2').classList.add('hide');
+      document.getElementById('page3').classList.remove('hide');
+    }
+    function toWhatsapp() {
+      const msg = encodeURIComponent(`ತಮ್ಮು, ಈ ಪುಟ ಪ್ರೀತಿ ಮತ್ತು ಮುದ್ದುತನದಿಂದ ತುಂಬಿದೆ!...`);
+      window.location.href = `https://wa.me/+919902366963?text=${msg}`;
+    }
+
+    // Music Play on First Click
+    document.addEventListener('click', function() {
+      var audio = document.getElementById("bgMusic");
+      audio.play();
+    }, { once: true });
+
+    // Toggle Mute/Unmute Button
+    function toggleAudio() {
+      var audio = document.getElementById("bgMusic");
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
+</body>
+</html>
